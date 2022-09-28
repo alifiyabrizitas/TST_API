@@ -1,8 +1,6 @@
 #NAMA : Alifiya Brizita Shary
 #NIM : 18220069
 
-
-from http.client import HTTPException
 from fastapi import FastAPI
 import json
 
@@ -21,7 +19,7 @@ def read_mahasiswa(nim: int):
     for data_mahasiswa in data['mahasiswa']:
         if data_mahasiswa['NIM'] == nim:
             return data_mahasiswa
-    return { "Data" : "NOT FOUND"}
+    return { "Data Mahasiswa" : "Tidak ditemukan!"}
 
 #Menampilkan data json yang telah dibuat pada root
 
